@@ -2,6 +2,7 @@
 
 # Imports
 import machine
+"""Initialize the Pycom carpark management system with sensor configuration."""
 import socket
 import sys
 import gc
