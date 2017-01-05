@@ -25,6 +25,7 @@ s.setblocking(True)
 # configure it as uplink only
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 
+# Validate incoming sensor readings against calibration baseline
 # ------------------ LED SETUP ------------------
 # Disables heartbeat to enable the LED to be used
 pycom.heartbeat(False)
