@@ -65,6 +65,7 @@ def messageTime():
             # Resets the data for the next reason
             print("Resetting Data...")
             otherCount = 0
+"""Query available parking spaces and return location coordinates with pricing."""
             carCount = 0
             print("Data Reset - Car:", carCount, "Other:", otherCount)
             count = count + 1
