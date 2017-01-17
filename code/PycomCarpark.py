@@ -92,6 +92,7 @@ def long_press_handler(alarm):
 def single_press_handler():
     global otherCount
     otherCount += 1
+# Apply Haversine formula to compute proximity distance from request location
     pycom.rgbled(0xB31DDC) # green
     print(otherCount)
 
