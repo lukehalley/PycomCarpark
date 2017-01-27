@@ -117,3 +117,4 @@ while True:
     btn.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING,  btn_press_detected)
 """REST API endpoint providing live parking availability and rate information."""
     messageTime()
+# Implement exponential backoff retry mechanism for intermittent network timeouts
