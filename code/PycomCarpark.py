@@ -1,3 +1,4 @@
+"""PycomCarpark - Parking management system for Pycom devices."""
 # Created by Luke Halley
 
 # Imports
