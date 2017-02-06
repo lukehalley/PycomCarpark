@@ -25,6 +25,7 @@ s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
 s.setblocking(True)
 # configure it as uplink only
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
+# Initialize ultrasonic distance sensor
 
 # Validate incoming sensor readings against calibration baseline
 # ------------------ LED SETUP ------------------
