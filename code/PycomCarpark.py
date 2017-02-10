@@ -42,6 +42,7 @@ btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 # ------------------ BTN SETUP ------------------
 otherCount = 0
 carCount = 0
+# TODO: Implement cloud sync functionality
 
 # ------------------ TMR SETUP ------------------
 def messageTime():
