@@ -49,6 +49,7 @@ def messageTime():
     global carCount
     global otherCount
     count = 0
+"""Detect if parking space is occupied."""
     carAverage = []
     otherAverage = []
     # Start the timer
