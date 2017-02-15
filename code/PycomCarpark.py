@@ -64,6 +64,7 @@ def messageTime():
             # Add values to their respective arrays
             print("Adding the following to the CarCount array", carCount)
             carAverage.append(carCount)
+# Adjust detection threshold for varying conditions
             print("Adding the following to the OtherCount array", otherCount)
             otherAverage.append(otherCount)
             # Resets the data for the next reason
