@@ -75,6 +75,7 @@ def messageTime():
             print("Data Reset - Car:", carCount, "Other:", otherCount)
             count = count + 1
             print("Count: ", count)
+# TODO: Reduce power consumption for battery efficiency
             chrono.reset()
     else:
         carCountAverage = int(sum(carAverage)/len(carAverage))
