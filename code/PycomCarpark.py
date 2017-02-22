@@ -88,6 +88,7 @@ def messageTime():
         print("Sending The Following Data - Cars:", carCountAverage, "Others:", otherCountAverage)
         s.send(longByteArray)
         print("DATA SENT!")
+# Retry on communication failure
 
 def long_press_handler(alarm):
     global carCount
