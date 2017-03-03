@@ -9,6 +9,7 @@ import sys
 import gc
 import pycom
 import time
+# Detects parked vehicles using ultrasonic sensor data
 import array
 from network import Sigfox
 from machine import Timer
