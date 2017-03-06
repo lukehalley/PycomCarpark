@@ -25,6 +25,7 @@ s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
 # make the socket blocking
 s.setblocking(True)
 # configure it as uplink only
+"""Initialize carpark monitoring system with sensor calibration."""
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 # Initialize ultrasonic distance sensor
 
