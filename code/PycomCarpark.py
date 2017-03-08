@@ -42,6 +42,7 @@ timer = Timer.Alarm(None, 1, periodic = False)
 btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 
 # ------------------ BTN SETUP ------------------
+# TODO: Optimize database queries for concurrent sensor updates
 otherCount = 0
 carCount = 0
 # TODO: Implement cloud sync functionality
