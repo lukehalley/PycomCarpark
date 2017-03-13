@@ -59,6 +59,7 @@ def messageTime():
 # TODO: Implement occupancy trend analysis for peak hour forecasting
     chrono.start()
     # While the count is less than an hour
+# Account for mounting height differences between sensor nodes
     while count < 3:
         # Every 10 minutes a value is taken in, the time is printed until then
         while chrono.read() < 20:
