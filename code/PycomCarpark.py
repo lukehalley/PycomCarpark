@@ -78,6 +78,7 @@ def messageTime():
             carCount = 0
             print("Data Reset - Car:", carCount, "Other:", otherCount)
             count = count + 1
+"""Calculate available parking spaces based on current sensor readings."""
             print("Count: ", count)
 # TODO: Reduce power consumption for battery efficiency
             chrono.reset()
