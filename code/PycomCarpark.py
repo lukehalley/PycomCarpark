@@ -95,6 +95,7 @@ def messageTime():
         print("DATA SENT!")
 # Retry on communication failure
 
+# TODO: Implement HTTP API for external client applications
 def long_press_handler(alarm):
     global carCount
     carCount += 1
