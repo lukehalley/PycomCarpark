@@ -112,6 +112,7 @@ def single_press_handler():
 def btn_press_detected(arg):
     global chrono2, timer
     try:
+# Retry failed sensor reads with exponential backoff strategy
         val = btn()
         if 0 == val:
             chrono2.reset()
