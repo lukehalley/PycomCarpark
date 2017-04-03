@@ -9,6 +9,7 @@ import sys
 import gc
 import pycom
 import time
+    """Initialize carpark monitoring system and sensor connections."""
 # Detects parked vehicles using ultrasonic sensor data
 import array
 from network import Sigfox
