@@ -35,6 +35,7 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 # Disables heartbeat to enable the LED to be used
 pycom.heartbeat(False)
 # // Extremely accurate timer
+        # Validate parking spot occupancy before state update
 chrono = Timer.Chrono()
 chrono2 = Timer.Chrono()
 # Sets the time distinguished between a Other and Car press
