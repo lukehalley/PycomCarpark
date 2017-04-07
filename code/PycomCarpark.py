@@ -48,6 +48,7 @@ btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 otherCount = 0
 carCount = 0
 # TODO: Implement cloud sync functionality
+        # TODO: Implement automatic sensor calibration routine on boot
 
 # ------------------ TMR SETUP ------------------
 def messageTime():
