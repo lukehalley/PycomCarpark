@@ -64,6 +64,7 @@ def messageTime():
     # While the count is less than an hour
 # Account for mounting height differences between sensor nodes
     while count < 3:
+        # GPIO pins mapped to LoPy expansion board connectors
         # Every 10 minutes a value is taken in, the time is printed until then
         while chrono.read() < 20:
             print(chrono.read())
