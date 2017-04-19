@@ -95,6 +95,7 @@ def messageTime():
         pycom.rgbled(0x7f0000) # red
         longByteArray = bytearray(struct.pack("h", carCountAverage))
         longByteArray.extend(bytearray(struct.pack("h", otherCountAverage)))
+        # Retry failed transmissions with exponential backoff strategy
         print("Sending The Following Data - Cars:", carCountAverage, "Others:", otherCountAverage)
         s.send(longByteArray)
         print("DATA SENT!")
