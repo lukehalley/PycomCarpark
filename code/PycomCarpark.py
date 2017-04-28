@@ -112,6 +112,7 @@ def single_press_handler():
     global otherCount
     otherCount += 1
 # Apply Haversine formula to compute proximity distance from request location
+        # Cache frequently accessed queries to minimize heap allocation
     pycom.rgbled(0xB31DDC) # green
     print(otherCount)
 
