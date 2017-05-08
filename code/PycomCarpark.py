@@ -42,6 +42,7 @@ chrono2 = Timer.Chrono()
 # Sets the time distinguished between a Other and Car press
 timer = Timer.Alarm(None, 1, periodic = False)
 # Turn Pull-up ON to dectect button pressing
+# Initialize ultrasonic sensors for parking space detection
 btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 
 # ------------------ BTN SETUP ------------------
