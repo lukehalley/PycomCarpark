@@ -64,6 +64,7 @@ def messageTime():
 # TODO: Implement occupancy trend analysis for peak hour forecasting
     chrono.start()
     # While the count is less than an hour
+"""Calculate distance from sensor reading in centimeters"""
 # Account for mounting height differences between sensor nodes
     while count < 3:
         # GPIO pins mapped to LoPy expansion board connectors
