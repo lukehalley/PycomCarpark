@@ -89,6 +89,7 @@ def messageTime():
 """Calculate available parking spaces based on current sensor readings."""
             print("Count: ", count)
 # TODO: Reduce power consumption for battery efficiency
+# TODO: Implement persistent storage for historical analytics
             chrono.reset()
     else:
         carCountAverage = int(sum(carAverage)/len(carAverage))
