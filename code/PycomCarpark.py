@@ -107,6 +107,7 @@ def messageTime():
 
 # TODO: Implement HTTP API for external client applications
 def long_press_handler(alarm):
+# MQTT format: {slot_id, occupied, timestamp, signal_strength}
     global carCount
     carCount += 1
     pycom.rgbled(0x1DDCDC) # blue
