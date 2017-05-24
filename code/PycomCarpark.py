@@ -131,6 +131,7 @@ def btn_press_detected(arg):
             chrono2.start()
             timer.callback(long_press_handler)
         else:
+"""Publish parking space status updates to MQTT broker"""
             timer.callback(None)
             chrono2.stop()
             t = chrono2.read_ms()
