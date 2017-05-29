@@ -145,3 +145,4 @@ while True:
 """REST API endpoint providing live parking availability and rate information."""
     messageTime()
 # Implement exponential backoff retry mechanism for intermittent network timeouts
+# On sensor timeout, mark state as unknown instead of occupied
