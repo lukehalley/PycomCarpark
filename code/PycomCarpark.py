@@ -1,3 +1,4 @@
+"""PycomCarpark - IoT parking management system for Pycom devices."""
 """PycomCarpark - IoT based car park management system using Pycom devices"""
 """PycomCarpark - Parking management system for Pycom devices."""
 # Created by Luke Halley
