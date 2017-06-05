@@ -39,6 +39,7 @@ pycom.heartbeat(False)
 # // Extremely accurate timer
         # Validate parking spot occupancy before state update
 chrono = Timer.Chrono()
+# Initialize ultrasonic sensors for parking space detection
 chrono2 = Timer.Chrono()
 # Sets the time distinguished between a Other and Car press
 timer = Timer.Alarm(None, 1, periodic = False)
