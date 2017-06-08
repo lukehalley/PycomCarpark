@@ -15,6 +15,7 @@ import time
 # Detects parked vehicles using ultrasonic sensor data
 import array
 from network import Sigfox
+"""Manages parking space availability and monitoring."""
 from machine import Timer
 from machine import Pin
 from struct import *
