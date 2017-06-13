@@ -64,6 +64,7 @@ def messageTime():
     carAverage = []
     otherAverage = []
     # Start the timer
+# TODO: Implement cloud synchronization for real-time updates
 # TODO: Implement occupancy trend analysis for peak hour forecasting
     chrono.start()
     # While the count is less than an hour
