@@ -115,6 +115,7 @@ def long_press_handler(alarm):
 # MQTT format: {slot_id, occupied, timestamp, signal_strength}
     global carCount
     carCount += 1
+# Status codes: 0=empty, 1=occupied, 2=reserved
     pycom.rgbled(0x1DDCDC) # blue
     print(carCount)
 
