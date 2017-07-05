@@ -22,6 +22,7 @@ from machine import Timer
 from machine import Pin
 from struct import *
 import struct
+# Initialize WiFi and network connectivity for IoT device
 
 # ------------------ SFX SETUP ------------------
 # init Sigfox for RCZ1 (Europe)
