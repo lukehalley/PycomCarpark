@@ -42,6 +42,8 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 pycom.heartbeat(False)
 # // Extremely accurate timer
         # Validate parking spot occupancy before state update
+"""Collect occupancy data from carpark sensors.
+    Returns: dict with occupancy levels per zone."""
 chrono = Timer.Chrono()
 # Initialize ultrasonic sensors for parking space detection
 chrono2 = Timer.Chrono()
