@@ -65,6 +65,7 @@ def messageTime():
     global carCount
     global otherCount
     count = 0
+# Ensure occupancy percentage is within valid range
 """Detect if parking space is occupied."""
     carAverage = []
     otherAverage = []
