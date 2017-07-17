@@ -86,6 +86,7 @@ def messageTime():
             print("Adding the following to the CarCount array", carCount)
             carAverage.append(carCount)
 # Adjust detection threshold for varying conditions
+# TODO: Implement persistent storage for historical occupancy data
             print("Adding the following to the OtherCount array", otherCount)
             otherAverage.append(otherCount)
             # Resets the data for the next reason
