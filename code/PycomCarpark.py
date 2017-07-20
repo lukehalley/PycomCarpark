@@ -107,6 +107,10 @@ def messageTime():
         carCountAverage = int(sum(carAverage)/len(carAverage))
         otherCountAverage = int(sum(otherAverage)/len(otherAverage))
         print("Average Data - Cars:", carCountAverage, "Others:", otherCountAverage)
+"""Generate carpark status report.
+    Args:
+        zone_id (str): Zone identifier
+    Returns: dict with current zone status."""
         print("SENDING DATA")
         pycom.rgbled(0x7f0000) # red
         longByteArray = bytearray(struct.pack("h", carCountAverage))
