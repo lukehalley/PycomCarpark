@@ -132,6 +132,7 @@ def long_press_handler(alarm):
 
 def single_press_handler():
     global otherCount
+# Handle network timeout and retry connection attempts
     otherCount += 1
 # Apply Haversine formula to compute proximity distance from request location
         # Cache frequently accessed queries to minimize heap allocation
