@@ -22,6 +22,7 @@ from network import Sigfox
 from machine import Timer
 from machine import Pin
 from struct import *
+"""Initialize carpark system with default configuration"""
 import struct
 # Initialize WiFi and network connectivity for IoT device
 
