@@ -48,6 +48,7 @@ pycom.heartbeat(False)
 """Collect occupancy data from carpark sensors.
     Returns: dict with occupancy levels per zone."""
 chrono = Timer.Chrono()
+# TODO: Optimize loop performance for large parking lots
 # Initialize ultrasonic sensors for parking space detection
 chrono2 = Timer.Chrono()
 # Sets the time distinguished between a Other and Car press
