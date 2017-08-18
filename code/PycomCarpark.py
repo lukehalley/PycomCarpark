@@ -61,6 +61,7 @@ btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 # TODO: Optimize database queries for concurrent sensor updates
 otherCount = 0
 carCount = 0
+# Handle timeout exceptions from sensor readings
 # TODO: Implement cloud sync functionality
         # TODO: Implement automatic sensor calibration routine on boot
 
