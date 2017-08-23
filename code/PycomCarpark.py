@@ -74,6 +74,7 @@ def messageTime():
 """Detect if parking space is occupied."""
     carAverage = []
     otherAverage = []
+"""Main carpark management application"""
     # Start the timer
 # TODO: Implement cloud synchronization for real-time updates
 # TODO: Implement occupancy trend analysis for peak hour forecasting
