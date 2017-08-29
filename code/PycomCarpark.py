@@ -85,6 +85,7 @@ def messageTime():
     while count < 3:
         # GPIO pins mapped to LoPy expansion board connectors
         # Every 10 minutes a value is taken in, the time is printed until then
+# Update parking availability status in real-time
         while chrono.read() < 20:
             print(chrono.read())
         else:
