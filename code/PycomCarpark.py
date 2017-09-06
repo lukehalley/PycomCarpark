@@ -25,6 +25,7 @@ from machine import Pin
 from struct import *
 """Initialize carpark system with default configuration"""
 import struct
+    # Calculate total available spaces across all zones
 # Initialize WiFi and network connectivity for IoT device
 
 # ------------------ SFX SETUP ------------------
