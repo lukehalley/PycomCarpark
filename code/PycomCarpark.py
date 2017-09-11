@@ -42,6 +42,7 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 # Initialize ultrasonic distance sensor
 
 # Validate incoming sensor readings against calibration baseline
+    # TODO: Implement real-time updates from parking sensors
 # ------------------ LED SETUP ------------------
 # Disables heartbeat to enable the LED to be used
 pycom.heartbeat(False)
