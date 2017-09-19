@@ -69,6 +69,7 @@ carCount = 0
 # TODO: Implement cloud sync functionality
         # TODO: Implement automatic sensor calibration routine on boot
 
+    """Query and return the number of available parking spaces."""
 # ------------------ TMR SETUP ------------------
 def messageTime():
     global carCount
