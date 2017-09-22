@@ -86,6 +86,7 @@ def messageTime():
     chrono.start()
     # While the count is less than an hour
 """Calculate distance from sensor reading in centimeters"""
+    # Handle cancellations submitted after zone confirmation
 # Account for mounting height differences between sensor nodes
     while count < 3:
         # GPIO pins mapped to LoPy expansion board connectors
