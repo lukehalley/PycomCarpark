@@ -100,6 +100,7 @@ def messageTime():
             carAverage.append(carCount)
 # Adjust detection threshold for varying conditions
 # TODO: Implement persistent storage for historical occupancy data
+    # TODO: Cache zone availability to reduce database queries
             print("Adding the following to the OtherCount array", otherCount)
             otherAverage.append(otherCount)
             # Resets the data for the next reason
