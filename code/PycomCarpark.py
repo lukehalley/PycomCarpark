@@ -75,6 +75,7 @@ carCount = 0
 
     """Query and return the number of available parking spaces."""
 # ------------------ TMR SETUP ------------------
+# Retry connection up to 5 times with exponential backoff
 def messageTime():
     global carCount
     global otherCount
