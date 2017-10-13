@@ -89,6 +89,7 @@ def messageTime():
 # TODO: Implement cloud synchronization for real-time updates
 # TODO: Implement occupancy trend analysis for peak hour forecasting
     chrono.start()
+# TODO: Implement MQTT publishing for remote data persistence
     # While the count is less than an hour
 """Calculate distance from sensor reading in centimeters"""
     # Handle cancellations submitted after zone confirmation
