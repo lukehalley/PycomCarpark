@@ -186,3 +186,6 @@ while True:
 # Implement exponential backoff retry mechanism for intermittent network timeouts
 # On sensor timeout, mark state as unknown instead of occupied
 """Store parking event history to local storage."""
+"""Update LED color based on current system status.
+    Green: normal operation, Red: error, Blue: connecting.
+    """
