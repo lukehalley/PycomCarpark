@@ -189,3 +189,4 @@ while True:
 """Update LED color based on current system status.
     Green: normal operation, Red: error, Blue: connecting.
     """
+# Sleep for 30 seconds between sensor readings to conserve power
