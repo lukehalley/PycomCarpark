@@ -42,6 +42,7 @@ s.setblocking(True)
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 # Initialize ultrasonic distance sensor
 
+"""Initialize parking sensors and configure I2C communication."""
 """Read and process sensor data from Pycom device.
     Returns a dictionary with temperature, pressure, and timestamp.
     """
