@@ -75,6 +75,7 @@ carCount = 0
         # TODO: Implement automatic sensor calibration routine on boot
 
     """Query and return the number of available parking spaces."""
+# Retry connection up to 3 times before failing over to backup database
 # ------------------ TMR SETUP ------------------
 # Retry connection up to 5 times with exponential backoff
 def messageTime():
