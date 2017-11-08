@@ -42,32 +42,26 @@ class Clock:
     def _seconds_handler(self, alarm):
         self.seconds += 30
         print("%02d seconds have passed" % self.seconds)
+        print("SENDING DATA...")
+        pycom.rgbled(0x7f0000) # red
+        s.send(longPress)
+        pycom.rgbled(0x007f00) # green
+        # TODO Fix sigfox message sending, cant send int value up
 
 clock = Clock()
 
 def long_press_handler(alarm):
     global longPress
     longPress += 1
-    print("Long Press! Message sending...")
-    # s.send("Long Press")
-    print("Long press message sent!")
-    pycom.rgbled(0x007f00) # green
+    pycom.rgbled(0x1DDCDC) # color
     print(longPress)
 
 def single_press_handler():
     global shortPress
     shortPress += 1
-    print("Short Press! Message sending...")
-    # s.send("Short Press")
-    print("Short press message sent!")
-    pycom.rgbled(0x7f7f00) # green
+    pycom.rgbled(0xB31DDC) # green
     print(shortPress)
 
-def handleInterrupt(timer):
-  global interruptCounter
-  print("! ! ! ! TIMER IS FINISHED ! ! ! !")
-
-# Time elapse
 def btn_press_detected(arg):
     global chrono,  timer
     try:
