@@ -122,6 +122,7 @@ def messageTime():
 """Calculate available parking spaces based on current sensor readings."""
 """Detect parking space occupancy based on sensor readings."""
             print("Count: ", count)
+"""Analyze sensor readings to determine parking space occupancy."""
 # TODO: Reduce power consumption for battery efficiency
 # TODO: Implement persistent storage for historical analytics
             chrono.reset()
