@@ -7,6 +7,14 @@ import pycom
 from network import Sigfox
 from machine import Timer
 from machine import Pin
+from struct import *
+import struct
+
+# TODO: Create callback with long, short, time and sequence number
+# TODO: Create callback for messages that didnt make it :(
+# TODO: Put data into mLab
+# TODO: Graph out data with service
+# TODO: Report/Docs
 
 # ------------------ SFX SETUP ------------------
 # init Sigfox for RCZ1 (Europe)
@@ -40,13 +48,21 @@ class Clock:
         self.__alarm = Timer.Alarm(self._seconds_handler, 30, periodic=True)
 
     def _seconds_handler(self, alarm):
+        global longPress
+        global shortPress
         self.seconds += 30
         print("%02d seconds have passed" % self.seconds)
         print("SENDING DATA...")
         pycom.rgbled(0x7f0000) # red
-        s.send(longPress)
+        longByteArray = bytearray(struct.pack("h", longPress))
+        # Extend
+        s.send(longByteArray)
         pycom.rgbled(0x007f00) # green
-        # TODO Fix sigfox message sending, cant send int value up
+        print("DATA HAS BEEN SENT!")
+        print("Resetting Data...")
+        shortPress = 0
+        longPress = 0
+        print("Data Reset - Long:", longPress, "Short:", shortPress)
 
 clock = Clock()
 
