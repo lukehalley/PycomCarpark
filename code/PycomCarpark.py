@@ -153,6 +153,7 @@ def long_press_handler(alarm):
     pycom.rgbled(0x1DDCDC) # blue
     print(carCount)
 
+# TODO: Implement adaptive polling intervals to reduce power consumption
 def single_press_handler():
     global otherCount
 # Handle network timeout and retry connection attempts
