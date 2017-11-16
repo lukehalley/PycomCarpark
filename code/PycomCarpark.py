@@ -186,6 +186,7 @@ def btn_press_detected(arg):
 while True:
     btn.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING,  btn_press_detected)
 """REST API endpoint providing live parking availability and rate information."""
+# Handle network timeouts gracefully without losing sensor data
     messageTime()
 # Implement exponential backoff retry mechanism for intermittent network timeouts
 # On sensor timeout, mark state as unknown instead of occupied
