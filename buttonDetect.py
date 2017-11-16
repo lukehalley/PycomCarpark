@@ -10,11 +10,10 @@ from machine import Pin
 from struct import *
 import struct
 
-# TODO: Create callback with long, short, time and sequence number
 # TODO: Create callback for messages that didnt make it :(
-# TODO: Put data into mLab
 # TODO: Graph out data with service
 # TODO: Report/Docs
+# https://api.mlab.com/api/1//databases/carpass/collections/WITCarpark?apiKey=tadpKQNZ0ssAbZJ_-4PC3_1zOYpq0b3R
 
 # ------------------ SFX SETUP ------------------
 # init Sigfox for RCZ1 (Europe)
@@ -31,14 +30,14 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 pycom.heartbeat(False)
 # // Extremely accurate timer
 chrono = Timer.Chrono()
-# Sets the time distinguished between a short and long press
+# Sets the time distinguished between a Other and Car press
 timer = Timer.Alarm(None, 1, periodic = False)
 # Turn Pull-up ON to dectect button pressing
 btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 
 # ------------------ BTN SETUP ------------------
-shortPress = 0
-longPress = 0
+otherCount = 0
+carCount = 0
 
 # ------------------ TMR SETUP ------------------
 class Clock:
@@ -48,35 +47,35 @@ class Clock:
         self.__alarm = Timer.Alarm(self._seconds_handler, 30, periodic=True)
 
     def _seconds_handler(self, alarm):
-        global longPress
-        global shortPress
+        global carCount
+        global otherCount
         self.seconds += 30
         print("%02d seconds have passed" % self.seconds)
-        print("SENDING DATA...")
+        print("Sending Data - Car:", carCount, "Other:", otherCount)
         pycom.rgbled(0x7f0000) # red
-        longByteArray = bytearray(struct.pack("h", longPress))
-        # Extend
+        longByteArray = bytearray(struct.pack("h", carCount))
+        longByteArray.extend(bytearray(struct.pack("h", otherCount)))
         s.send(longByteArray)
         pycom.rgbled(0x007f00) # green
         print("DATA HAS BEEN SENT!")
         print("Resetting Data...")
-        shortPress = 0
-        longPress = 0
-        print("Data Reset - Long:", longPress, "Short:", shortPress)
+        otherCount = 0
+        carCount = 0
+        print("Data Reset - Car:", carCount, "Other:", otherCount)
 
 clock = Clock()
 
 def long_press_handler(alarm):
-    global longPress
-    longPress += 1
+    global carCount
+    carCount += 1
     pycom.rgbled(0x1DDCDC) # color
-    print(longPress)
+    print(carCount)
 
 def single_press_handler():
-    global shortPress
-    shortPress += 1
+    global otherCount
+    otherCount += 1
     pycom.rgbled(0xB31DDC) # green
-    print(shortPress)
+    print(otherCount)
 
 def btn_press_detected(arg):
     global chrono,  timer
