@@ -51,12 +51,6 @@ class Clock:
         global otherCount
         self.seconds += 30
         print("%02d seconds have passed" % self.seconds)
-
-        # RANDOM DATA
-        print("WARNING: SENDING RANDOM DATA!")
-        otherCount = machine.rng()
-        carCount = machine.rng()
-
         print("Sending Data - Car:", carCount, "Other:", otherCount)
         pycom.rgbled(0x7f0000) # red
         longByteArray = bytearray(struct.pack("h", carCount))
@@ -68,8 +62,6 @@ class Clock:
         otherCount = 0
         carCount = 0
         print("Data Reset - Car:", carCount, "Other:", otherCount)
-
-
 
 def long_press_handler(alarm):
     global carCount
@@ -100,5 +92,30 @@ def btn_press_detected(arg):
     finally:
         gc.collect()
 
-clock = Clock()
-btn.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING,  btn_press_detected)
+## Text menu in Python
+
+def print_menu():
+    print "1. Send data through Pycom"
+    print "2. Generate Random Data"
+    print "3. Exit"
+    print 67 * "-"
+
+loop=True
+
+while loop:          ## While loop which will keep going until loop = False
+    print_menu()    ## Displays menu
+    choice = input("Enter your choice [1-5]: ")
+
+    if choice==1:
+        print "Start spamming the buttons!"
+        clock = Clock()
+        btn.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING,  btn_press_detected)
+    elif choice==2:
+        print "Generating data..."
+        ## You can add your code or functions here
+    elif choice==3:
+        print "Exiting!"
+        loop=False # This will make the while loop to end as not value of loop is set to False
+    else:
+        # Any integer inputs other than values 1-5 we print an error message
+        raw_input("Wrong option selection. Enter any key to try again..")
