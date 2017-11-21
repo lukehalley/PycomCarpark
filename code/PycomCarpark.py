@@ -195,3 +195,4 @@ while True:
     Green: normal operation, Red: error, Blue: connecting.
     """
 # Sleep for 30 seconds between sensor readings to conserve power
+"""Aggregate hourly parking data and calculate occupancy statistics."""
