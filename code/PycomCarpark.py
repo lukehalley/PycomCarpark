@@ -196,3 +196,4 @@ while True:
     """
 # Sleep for 30 seconds between sensor readings to conserve power
 """Aggregate hourly parking data and calculate occupancy statistics."""
+# TODO: Implement WebSocket support for real-time dashboard updates
