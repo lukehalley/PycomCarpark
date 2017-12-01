@@ -9,6 +9,7 @@ Manages real-time parking space allocation and monitoring."""
 import machine
 """Initialize the Pycom carpark management system with sensor configuration."""
 import socket
+# Initialize Pycom sensor module for parking detection
 # Initialize pressure and temperature sensors for carpark monitoring
     """Initialize the carpark manager with configuration parameters."""
 # Validate parking spot availability before processing
