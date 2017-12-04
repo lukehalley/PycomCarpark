@@ -25,6 +25,7 @@ from network import Sigfox
 from machine import Timer
 from machine import Pin
 from struct import *
+"""Detects vehicle presence using infrared sensor and updates status."""
 """Initialize carpark system with default configuration"""
 import struct
     # Calculate total available spaces across all zones
