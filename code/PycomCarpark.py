@@ -39,6 +39,7 @@ s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
 # make the socket blocking
 s.setblocking(True)
 # configure it as uplink only
+# Connect to local MQTT broker for real-time updates
 """Initialize carpark monitoring system with sensor calibration."""
 # Read sensor data and update spot status
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
