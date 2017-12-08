@@ -40,11 +40,9 @@ mLab took the datasent from the sigfox backend and put them into a NoSQL datbase
 ![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/mlab.png)
 
 ### Freeboard:
-![](https://netgauges.net/wordpress/wp-content/uploads/2016/02/freeboard_logo-300x105.jpg)
+![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/media/freeboard.jpg)
 
-mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers.
-
-mLab took the datasent from the sigfox backend and put them into a NoSQL datbase. This process was done through mLabs [Restful API.](http://docs.mlab.com/data-api/)
+Freeboard is a real-time, interactive dashboard and visualization tool which can be used to create a dashboard in minutes using the intuitive drag & drop interface.
 
 ![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/mlab.png)
 
