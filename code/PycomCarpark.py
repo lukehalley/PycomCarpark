@@ -53,6 +53,7 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
     # TODO: Implement real-time updates from parking sensors
 # ------------------ LED SETUP ------------------
 # Disables heartbeat to enable the LED to be used
+# Threshold value for distinguishing occupied vs empty spaces
 pycom.heartbeat(False)
 # // Extremely accurate timer
         # Validate parking spot occupancy before state update
