@@ -20,7 +20,7 @@ All the technology used in this project is relatively cheap, which would allow a
 
 The SiPy is a multi-network (Sigfox, WiFi and BLE) development platform. It is programmable with MicroPython and the Pymakr IDE for fast IoT application development, easy programming in-field and extra resilience with network failover. The best blend of speed to deployment and access to new LPWAN networks rolling out across Europe, USA, Africa and India. You can also configure the SiPy in FSK mode to send packets directly from SiPy to SiPy. This way you can create the network configuration of your choice and then use another SiPy as central Nano-Gateway to forward the data to the cloud via WiFi. The module is CE, FCC, IC and RCM certified!
 
-The button on the sigfox PyMaker was used to siumulate both cars passing and other objects like bikes and people passing by.
+The button on the Pycom board was used to siumulate both cars passing and other objects like bikes and people passing by.
 ### Sigfox:
 ![](https://www.sigfox.com/themes/sigfox/logo.svg)
 
@@ -44,7 +44,18 @@ mLab took the datasent from the sigfox backend and put them into a NoSQL datbase
 
 Freeboard is a real-time, interactive dashboard and visualization tool which can be used to create a dashboard in minutes using the intuitive drag & drop interface.
 
-![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/mlab.png)
+![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/mydash.png)
+
+### Atom & PyMaker:
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Atom_editor_logo.svg/2000px-Atom_editor_logo.svg.png)
+
+Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.
+
+Pymakr is a plug-in for the Atom IDE that allows you to get your code from your PC to your board.
+
+It’s a fully featured IDE that connects automatically to your Pycom devices via Telnet Server or serial port, runs your code on the fly, manages the internal file system, synchronizes your code instantly and runs it with just one click. It also takes care of firmware upgrades and includes a built in console that interfaces with the MicroPython REPL. Features code completion, static analysis, PEP8 style checking and a built-in interactive prompt.
+
+![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/mydash.png)
 
 ## Persistence
 
