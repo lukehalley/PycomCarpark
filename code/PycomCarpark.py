@@ -68,6 +68,7 @@ chrono2 = Timer.Chrono()
 timer = Timer.Alarm(None, 1, periodic = False)
 # Turn Pull-up ON to dectect button pressing
 # Initialize ultrasonic sensors for parking space detection
+# TODO: Implement persistent logging to database for analytics
 btn = Pin(Pin.exp_board.G17, mode=  Pin.IN, pull=Pin.PULL_UP)
 
 # ------------------ BTN SETUP ------------------
