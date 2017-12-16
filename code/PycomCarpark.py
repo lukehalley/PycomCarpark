@@ -1,5 +1,4 @@
-# TODO Get average car count for say 10 minutes taking a reading in every minute
-# TODO Get that average to send up to sigfox
+# Created by Luke Halley
 
 # Imports
 import machine
@@ -14,11 +13,6 @@ from machine import Timer
 from machine import Pin
 from struct import *
 import struct
-
-# TODO: Create callback for messages that didnt make it :(
-# TODO: Graph out data with service
-# TODO: Report/Docs
-# https://api.mlab.com/api/1//databases/carpass/collections/WITCarpark?apiKey=tadpKQNZ0ssAbZJ_-4PC3_1zOYpq0b3R
 
 # ------------------ SFX SETUP ------------------
 # init Sigfox for RCZ1 (Europe)
@@ -46,30 +40,6 @@ otherCount = 0
 carCount = 0
 
 # ------------------ TMR SETUP ------------------
-# class Clock:
-
-    # def __init__(self):
-    #     self.seconds = 0
-    #     self.__alarm = Timer.Alarm(self._seconds_handler, 60, periodic=True)
-        # class Timer.Alarm(handler=None, s, * , ms, us, arg=None, periodic=False)
-
-    # def _seconds_handler(self, alarm):
-    #     global carCount
-    #     global otherCount
-    #     self.seconds += 30
-    #     print("%02d seconds have passed" % self.seconds)
-    #     print("Sending Data - Car:", carCount, "Other:", otherCount)
-    #     pycom.rgbled(0x7f0000) # red
-    #     longByteArray = bytearray(struct.pack("h", carCount))
-    #     longByteArray.extend(bytearray(struct.pack("h", otherCount)))
-    #     # s.send(longByteArray)
-    #     pycom.rgbled(0x007f00) # green
-    #     print("DATA HAS BEEN SENT!")
-    #     print("Resetting Data...")
-    #     otherCount = 0
-    #     carCount = 0
-    #     print("Data Reset - Car:", carCount, "Other:", otherCount)
-
 def messageTime():
     global carCount
     global otherCount
@@ -84,24 +54,20 @@ def messageTime():
         while chrono.read() < 20:
             print(chrono.read())
         else:
-            # Add values to an array
+            # Add values to their respective arrays
             print("Adding the following to the CarCount array", carCount)
             carAverage.append(carCount)
             print("Adding the following to the OtherCount array", otherCount)
             otherAverage.append(otherCount)
+            # Resets the data for the next reason
             print("Resetting Data...")
             otherCount = 0
             carCount = 0
             print("Data Reset - Car:", carCount, "Other:", otherCount)
             count = count + 1
             print("Count: ", count)
-            time.sleep(5)
             chrono.reset()
     else:
-        print("AVRG DATA")
-        print(carAverage)
-        print(otherAverage)
-        time.sleep(20)
         carCountAverage = int(sum(carAverage)/len(carAverage))
         otherCountAverage = int(sum(otherAverage)/len(otherAverage))
         print("Average Data - Cars:", carCountAverage, "Others:", otherCountAverage)

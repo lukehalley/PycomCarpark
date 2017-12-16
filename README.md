@@ -20,7 +20,10 @@ All the technology used in this project is relatively cheap, which would allow a
 
 The SiPy is a multi-network (Sigfox, WiFi and BLE) development platform. It is programmable with MicroPython and the Pymakr IDE for fast IoT application development, easy programming in-field and extra resilience with network failover. The best blend of speed to deployment and access to new LPWAN networks rolling out across Europe, USA, Africa and India. You can also configure the SiPy in FSK mode to send packets directly from SiPy to SiPy. This way you can create the network configuration of your choice and then use another SiPy as central Nano-Gateway to forward the data to the cloud via WiFi. The module is CE, FCC, IC and RCM certified!
 
-The button on the Pycom board was used to siumulate both cars passing and other objects like bikes and people passing by.
+The button on the Pycom board was used to siumulate both cars passing and other objects like bikes and people passing by. 
+
+These values are taken every **10 minutes** for **1 hour** until these 12 values (Cars passed and Others) are averaged and sent to the sigfox backend as a byte array with these two values, the time they were recorded and finally theyre sequence number to ensure consistency (time (time) and sequence number (seqNumber) is provided by the sigfox backend)
+
 ### Sigfox:
 ![](https://www.sigfox.com/themes/sigfox/logo.svg)
 
@@ -55,36 +58,26 @@ Pymakr is a plug-in for the Atom IDE that allows you to get your code from your 
 
 It’s a fully featured IDE that connects automatically to your Pycom devices via Telnet Server or serial port, runs your code on the fly, manages the internal file system, synchronizes your code instantly and runs it with just one click. It also takes care of firmware upgrades and includes a built in console that interfaces with the MicroPython REPL. Features code completion, static analysis, PEP8 style checking and a built-in interactive prompt.
 
-![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/mydash.png)
-
-## Persistence
-
-**MongoDB** & **Mongoose** was used for persistance. **MongoDB** is a free and open-source cross-platform document-oriented database program. **Mongoose** is a **MongoDB** object modeling tool designed to work in an asynchronous environment. All information about all Instruments and Users were stored in the database.
-
-**mLab** was used to store data in the cloud. mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers.
-
-## Deployment
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AmazonWebservices_Logo.svg/2000px-AmazonWebservices_Logo.svg.png)
-
-Instrum.io was deployed using **Amazon Web Services**. Amazon Web Services is a subsidiary of Amazon.com that provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis with a free-tier option available for 12 months.
-
-Unfortunatly due to this being a paid service the web application isnt currently availble to the access.
+![](https://raw.githubusercontent.com/lukehalley/PycomCarpark/master/screenshots/atom.png)
 
 ## Version Control
 ![](https://sunlightmedia.org/wp-content/uploads/2017/02/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png)
-For version control, Github was used. I broke the development of the application into **stories** and commited to my repository each time a story was completed.
+For version control, Github was used. I broke the development of the project into **stories** and commited to my repository each time a story was completed.
+
+## Future Features
+* The dashboard could be displayed on a screen of an entrance to a carpark to allow people to know how many car spaces are left.
+
+* Push notications which would warn people if the car park was full of rapidly filling up.
+
+* Visual integration with CCTV cameras which would check if there was cars in space as well as knowing which space they are in.
 
 ## Problems
-*Wouldnt it count anything going out?* 
+*Wouldnt it count any object going out of the car park?* 
 
 The devices sensor would be limited to a certain range to prevent this
 
 ## Developer Experience
-I ensured a high standard of developer experience by adding comments into my project's files which explains the functions of the code and its use. I also ensured all commits to GitHub were informitive and easy to understand.
+I ensured a high standard of developer experience by adding comments into my code which explains the functions of the code and its use. I also ensured all commits to GitHub were informitive and easy to understand.
 
 ## References
-Skeleton code was created by following David Drohans ["Web App Development 2"](https://ddrohan.github.io/wit-wad/) tutorials).
-
-Design of the website was created using [AdminBSBMaterialDesign](https://github.com/gurayyarar/AdminBSBMaterialDesign), a fully responsive and free admin template. It is developed with Bootstrap 3.x Framework and Google Material Design of powers. Note: A small amount off custom CSS was added and edited in order to suit the application.
-
-NPM packages used: [MongoDB](https://www.npmjs.com/package/mongodb), [Mongoose](https://www.npmjs.com/package/mongoose) and [Node](https://www.npmjs.com/package/node)
+Any specific code snippets that were used by the SiPy board were retrived from the [Pycom Documentation"](https://docs.pycom.io/).
