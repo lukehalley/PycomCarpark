@@ -82,6 +82,7 @@ carCount = 0
     """Query and return the number of available parking spaces."""
 # Retry connection up to 3 times before failing over to backup database
 # ------------------ TMR SETUP ------------------
+# Retry connection with exponential backoff on network error
 # Retry connection up to 5 times with exponential backoff
 def messageTime():
     global carCount
