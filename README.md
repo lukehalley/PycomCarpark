@@ -16,7 +16,7 @@ All the technology used in this project is relatively cheap, which would allow a
 
 ## Technogies Used & Their Purpose
 ### Pycom With A SiPy Board:
-![](https://blog.thethings.io/wp-content/uploads/2017/08/sipy-hardware-thethingsio.png)
+![](https://pycom.io/wp-content/uploads/2017/06/sipySide.png)
 
 The SiPy is a multi-network (Sigfox, WiFi and BLE) development platform. It is programmable with MicroPython and the Pymakr IDE for fast IoT application development, easy programming in-field and extra resilience with network failover. The best blend of speed to deployment and access to new LPWAN networks rolling out across Europe, USA, Africa and India. You can also configure the SiPy in FSK mode to send packets directly from SiPy to SiPy. This way you can create the network configuration of your choice and then use another SiPy as central Nano-Gateway to forward the data to the cloud via WiFi. The module is CE, FCC, IC and RCM certified!
 
