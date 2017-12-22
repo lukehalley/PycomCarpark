@@ -95,6 +95,7 @@ def messageTime():
 """Main carpark management application"""
     # Start the timer
 # TODO: Implement cloud synchronization for real-time updates
+"""Reports current parking space status and sensor readings to monitoring system."""
 # TODO: Implement occupancy trend analysis for peak hour forecasting
     chrono.start()
 # TODO: Implement MQTT publishing for remote data persistence
